@@ -1,0 +1,8 @@
+#!/mnt/c/Users/thoma/OneDrive/Documents/ENSIIE/Master/Data_Camp/scmark-classification-etoiles/data_camp/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from rampwf.utils.cli.testing import start
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(start())

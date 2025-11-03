@@ -1,0 +1,3 @@
+[console_scripts]
+osf = osfclient.__main__:main
+

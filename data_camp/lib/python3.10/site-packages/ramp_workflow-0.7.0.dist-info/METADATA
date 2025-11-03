@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ramp-workflow
+Version: 0.7.0
+Summary: Toolkit for building analytics workflows on the top data science ecosystem
+Home-page: https://github.com/paris-saclay-cds/ramp-workflow
+Download-URL: https://github.com/paris-saclay-cds/ramp-workflow
+Maintainer: A. Boucaud, B. Kegl, G. Lemaitre, J. Van den Bossche
+Maintainer-email: balazs.kegl@gmail.com, guillaume.lemaitre@inria.fr
+License: BSD (3-clause)
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn>=0.22
+Requires-Dist: joblib
+Requires-Dist: cloudpickle
+Requires-Dist: click
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx-click; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+
+RAMP workflow
+=============
+
+RAMP workflow allows to define and run machine learning pipeline, documentations available here_.
+
+.. _here: https://paris-saclay-cds.github.io/ramp-docs/ramp-workflow/stable/
