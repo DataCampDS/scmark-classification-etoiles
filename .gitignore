@@ -8,3 +8,6 @@ data/
 # Python stuff
 __pycache__/
 .ipynb_checkpoints/
+
+data_camp/
+venv/
