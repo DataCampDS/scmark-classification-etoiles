@@ -7,8 +7,9 @@ from sklearn.pipeline import make_pipeline
 
 def preprocess_log(X):
     """
-    Application du log(1 + x) pour réduire l'écart entre les valeurs
+    Application of log(1 + x) to reduce the gap between the values
     """
+    X = X.toarray()  # Convert sparse matrix to dense
     X_log = np.log1p(X)
     return X_log
 
@@ -16,10 +17,10 @@ class Classifier(object):
     def __init__(self):
         # Use scikit-learn's pipeline
         self.pipe = make_pipeline(
-            StandardScaler(with_mean=False, with_std=True),
+            StandardScaler(with_mean=True, with_std=True),
             PCA(n_components=50),
             HistGradientBoostingClassifier(
-                max_depth=2, max_features=1.0
+                max_depth=2
             ),
         )
 
