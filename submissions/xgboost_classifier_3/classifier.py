@@ -26,7 +26,7 @@ def xgboost_pipeline(scaler: bool, pca_n_components, max_depths, max_features):
 
     pipe.steps.append(
         ("XBBoost Classifier",
-            HistGradientBoostingClassifier(max_depth=max_depths, max_features=max_features),
+            HistGradientBoostingClassifier(max_depth=max_depths),
         ),
     )
 
