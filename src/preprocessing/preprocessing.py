@@ -43,13 +43,13 @@ def preprocess(X, method='none'):
     Convertit la matrice sparse en dense
     Normalisation : chaque cellule a une somme = 1
     """
+    if not isinstance(X, np.ndarray):
+        X = X.toarray()
     if method == 'none':
-        X = X.toarray()
+        pass
     elif method == 'normalize':
-        X = X.toarray()
         X = X / X.sum(axis=1)[:, np.newaxis]
     elif method == 'log':
-        X = X.toarray()
         X = np.log1p(X)
     else:
         raise ValueError("Unknown preprocessing method: {}".format(method))
@@ -59,10 +59,13 @@ def preprocess(X, method='none'):
 ##                      Highly Variable Genes Selection
 ##=================================================================================##
 
-def select_HVG(X, N_HVG=2000):
+def select_HVG(X, N_HVG):
     """
     Sélection des N_HVG gènes les plus variables
     """
+    if N_HVG is None:
+        return X
+    
     gene_vars = X.var(axis=0)
     hvg_idx = np.argsort(gene_vars)[-N_HVG:]
 
